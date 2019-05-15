@@ -45,9 +45,9 @@
 * Для того чтобы сделать каждую заметку в виде [CardView](https://material.io/design/components/cards.html):
     1. В build.gradle (app) подключаем зависимость `implementation 'com.google.android.material:material:1.1.0-alpha05'`;
     2. В xml разметке используем `androidx.cardview.widget.CardView` точно так же, как `FrameLayout`.
-* [FAB](https://developer.android.com/guide/topics/ui/floating-action-button) (Floating Action Button) Находится в библиотеке которую мы уже подключили для `CardView`. Используется как обычный `Button`.
-* В демо приложение подтверждение удаления заметки сделано с помощью [AlertDialog](https://developer.android.com/guide/topics/ui/dialogs#AlertDialog). Как и в примере из документации с помощью `new AlertDialog.Builder()` вы можете задать заголовок и текст диалога, а также с помощью методов `setPositiveButton` и `setNegativeButton` задать кнопки _подтвердить_ и _отмена_.
-* Шифрование. Опционально(!). В демо приложении оно не реализованно, но мне показалась неплохой вот эта статья на [code.tutsplus.com](https://code.tutsplus.com/tutorials/storing-data-securely-on-android--cms-30558), я бы начал с неё.
+* [FAB](https://developer.android.com/guide/topics/ui/floating-action-button) (Floating Action Button) находится в библиотеке, которую мы уже подключили для `CardView`. Используется как обычный `Button`.
+* В демо приложении подтверждение удаления заметки сделано с помощью [AlertDialog](https://developer.android.com/guide/topics/ui/dialogs#AlertDialog). Как и в примере из документации с помощью `new AlertDialog.Builder()` вы можете задать заголовок и текст диалога, а также с помощью методов `setPositiveButton` и `setNegativeButton` задать кнопки _подтвердить_ и _отмена_.
+* Шифрование. Опционально(!), т.е. это дополнительное необязательное условие для выполнения дипломного проекта. В демо приложении оно не реализованно, но мне показалась неплохой вот эта статья на [code.tutsplus.com](https://code.tutsplus.com/tutorials/storing-data-securely-on-android--cms-30558), я бы начал с неё.
 
 ## Минимальные требования для получения зачета 
 

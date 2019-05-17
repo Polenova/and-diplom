@@ -2,9 +2,9 @@
 
 ## Окно с созданием/редактированием заметки
 
-![enter pin](images/notes_edit.png)
-![enter pin](images/notes_edit_with_deadline.png)
-![enter pin](images/notes_choose_deadline.png)
+![enter pin](../images/note_edit.png)
+![enter pin](../images/note_edit_with_deadline.png)
+![enter pin](../images/note_choose_deadline.png)
 
 Окно состоит из:
 * Поля ввода заголовка заметки;
@@ -50,6 +50,7 @@ datePickerDialog = new DatePickerDialog(
 );
 datePickerDialog.show();
 ```
+Вторым аргументом в конструктор `DatePickerDialog` мы передаем `DatePickerDialog.OnDateSetListener`, который будет вызван когда пользователь выберет дату. Подсказка – при нажатии нужно вызвать `datePickerDialog.dismiss()`, чтобы закрыть диалог.
 
 Кнопка сохранить:
 Это `OptionsMenu` от `Activity` с заданой иконкой и `app:showAsAction="always"`.

@@ -2,8 +2,8 @@
 
 ## Окно с перечнем всех заметок
 
-![enter pin](images/notes_list.png)
-![enter pin](images/note_delete_confirmation.png)
+![enter pin](../images/notes_list.png)
+![enter pin](../images/note_delete_confirmation.png)
 
 Окно состоит из:
 * Списка заметок в виде карточек;

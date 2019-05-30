@@ -16,10 +16,12 @@
 *class App*:
 В Android в качестве такого места удобно использовать класс App, который представляет собой экземпляр приложения, для этого нам нужно:
 1. Унаследовать свой класс от `android.app.Application`;
-2. Создать статические переменные, хранящие необходимые нам реализации интерфейсов и геттеры для них;
-3. Переопределить метод `onCreate()` и в нём создать необходимые нам реализации классов. Обратите внимание класс `Application` является наследником `Context`, так что если нам нужен `Context` мы можем использовать `this`;
-4. В приложении, если нам понадобился `NoteRepository` или `Keystore`, мы можем обратиться к `App.getNoteRepository()` и получить реализацию. Причем нам не важно какую именно!
+2. Указать этот класс в манифесте приложения: в блок `<application` добавить атрибут `name=".App"`, где `App` - имя вашего класса;
+3. Создать статические переменные, хранящие необходимые нам реализации интерфейсов и геттеры для них;
+4. Переопределить метод `onCreate()` и в нём создать необходимые нам реализации классов. Обратите внимание класс `Application` является наследником `Context`, так что если нам нужен `Context` мы можем использовать `this`;
+5. В приложении, если нам понадобился `NoteRepository` или `Keystore`, мы можем обратиться к `App.getNoteRepository()` и получить реализацию. Причем нам не важно какую именно!
 
+Пример класса _App_:
 ```java
 public class App extends Application {
     private static NoteRepository noteRepository;
@@ -46,3 +48,24 @@ public class App extends Application {
     }
 }
 ```
+
+Пример манифеста:
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.netology.notes">
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity … />
+```
+
+> `.App` обозначает что нужно искать класс `App` в пакете указанном для приложения (см. выше `package="ru.netology.notes"`). Это эквивалентно полному указанию пути до класса `ru.netology.notes.App`.
